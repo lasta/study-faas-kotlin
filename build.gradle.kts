@@ -4,6 +4,7 @@ plugins {
 }
 
 repositories {
+    mavenLocal()
     jcenter()
     maven { setUrl("https://dl.bintray.com/kotlin/kotlinx.html/") }
 }
@@ -15,6 +16,12 @@ kotlin {
         }
     }
 
+    sourceSets["commonTest"].apply {
+        dependencies {
+            api("org.jetbrains.kotlin:kotlin-test-annotations-common")
+        }
+    }
+
     val targets = listOf(
 //      mingwX64("mingw"), // for windows
         macosX64("macos"),
@@ -22,6 +29,8 @@ kotlin {
     )
 
     configure(targets) {
+        compilations.all { kotlinOptions.verbose = true }
+
         binaries {
             executable("sample") {
                 entryPoint = "sample.main"
