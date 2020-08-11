@@ -5,21 +5,30 @@ plugins {
 
 repositories {
     jcenter()
+    maven { setUrl("https://dl.bintray.com/kotlin/kotlinx.html/") }
 }
 
 kotlin {
-    // For ARM, should be changed to iosArm32 or iosArm64
-    // For Linux, should be changed to e.g. linuxX64
-    // For MacOS, should be changed to e.g. macosX64
-    // For Windows, should be changed to e.g. mingwX64
-    // https://github.com/JetBrains/kotlin/blob/1.3.20/libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/resources/testProject/new-mpp-native-binaries/kotlin-dsl/build.gradle.kts
-    macosX64("macos") {
+    sourceSets["commonMain"].apply {
+        dependencies {
+            api("org.jetbrains.kotlin:kotlin-stdlib-common")
+        }
+    }
+
+    val targets = listOf(
+//      mingwX64("mingw"), // for windows
+        macosX64("macos"),
+        linuxX64("linux")
+    )
+
+    configure(targets) {
         binaries {
             executable("sample") {
                 // Change to specify fully qualified name of your application's entry point:
-               entryPoint = "sample.main"
+                entryPoint = "sample.main"
                 // Specify command-line arguments, if necessary:
 //                runTask?.args("")
+                // runTask?.args("")
             }
             executable("sample2") {
                 // Change to specify fully qualified name of your application's entry point:
