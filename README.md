@@ -10,16 +10,23 @@
 - [x] mark project structure automatically by IntelliJ IDEA
 - [ ] clean up `build.gradle.kts`
   - [ ] create `buildSrc`
-- [ ] arrange directory structure
+- [ ] arrange source directory structure
 - [ ] import JSON serializer
 - [ ] import ktor
   - [ ] use HTTP Client
 - [ ] import DI library
   - kodein?
-- [ ] run and debug codes on IntelliJ IDEA
-- [ ] run and debug on Alpine Linux on Docker for Mac
+- [ ] on IntelliJ IDEA
+  - [ ] run
+  - [ ] debug
+  - [x] unit test
+  - [ ] sam local (AWS Serverless Application Model)
+- [ ] deploy
+- [ ] create API test
+  - [ ] [preacher][preacher]
 
 [example to build at once]: https://github.com/JetBrains/kotlin/blob/1.3.20/libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/resources/testProject/new-mpp-native-binaries/kotlin-dsl/build.gradle.kts
+[preacher]: https://github.com/ymoch/preacher
 
 ## TL;DR
 ### build
@@ -55,3 +62,14 @@ BUILD SUCCESSFUL in 1s
 ```
 
 
+## Setup
+### to run `sam local` on IntelliJ IDEA
+### on mac
+1. Install [Homebrew][Homebrew]
+2. Install AWS CLI2
+  * `brew install awscli`
+
+
+
+[Homebrew]: https://brew.sh/
+[Installing the AWS Toolkit for JetBrains]: https://docs.aws.amazon.com/toolkit-for-jetbrains/latest/userguide/setup-toolkit.html
