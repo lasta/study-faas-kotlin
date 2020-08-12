@@ -1,8 +1,7 @@
 package entrypoint.sample1
 
-fun hello(): String = "Hello, Kotlin/Native!"
-
-fun sum(a: Int, b: Int): Int = a + b
+import service.hello.hello
+import service.hello.sum
 
 fun main() {
     println(hello())
