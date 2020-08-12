@@ -17,7 +17,7 @@
 - [ ] import DI library
   - kodein?
 - [ ] on IntelliJ IDEA
-  - [ ] run
+  - [x] run
   - [ ] debug
   - [x] unit test
   - [ ] sam local (AWS Serverless Application Model)
