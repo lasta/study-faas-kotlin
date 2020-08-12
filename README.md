@@ -37,8 +37,21 @@ Hello, Kotlin/Native!
 ```
 
 ### on Linux
-```
+```console
 $ ./build/bin/linuxX64/sampleReleaseExecutable/sample.kexe
 Hello, Kotlin/Native!
 ```
+
+### Test
+#### on Mac
+```console
+$ ./gradlew allTests
+
+> Configure project :
+Kotlin Multiplatform Projects are an experimental feature.
+
+BUILD SUCCESSFUL in 1s
+8 actionable tasks: 2 executed, 6 up-to-date
+```
+
 
