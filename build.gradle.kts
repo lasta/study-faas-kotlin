@@ -1,5 +1,7 @@
 // cf. https://madhead.me/posts/kotlin-native-lambda/
 
+import binaries.supplyEntryPoints
+
 plugins {
     kotlin("multiplatform").version("1.3.72")
 }
@@ -34,13 +36,11 @@ kotlin {
         compilations.all { kotlinOptions.verbose = true }
 
         binaries {
-            executable("sample") {
-                entryPoint = "sample.main"
-                // Specify command-line arguments, if necessary:
-                // runTask?.args("")
-            }
-            executable("sample2") {
-                entryPoint = "sample2.main"
+            supplyEntryPoints().forEach { entryPoint ->
+                executable(entryPoint.packageName) {
+                    this.entryPoint = entryPoint.entryPoint
+                    runTask?.args(entryPoint.args)
+                }
             }
         }
     }
@@ -52,4 +52,3 @@ tasks {
         distributionType = Wrapper.DistributionType.ALL
     }
 }
-

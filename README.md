@@ -9,7 +9,8 @@
   - [sample][example to build at once]
 - [x] mark project structure automatically by IntelliJ IDEA
 - [ ] clean up `build.gradle.kts`
-  - [ ] create `buildSrc`
+  - [x] create `buildSrc`
+  - [ ] generate "executables" automatically
 - [ ] arrange source directory structure
 - [ ] import JSON serializer
 - [ ] import ktor
