@@ -27,7 +27,7 @@
 ./gradlew build
 ```
 
-Initially, it may takes several minutes.
+Initially, it may take several minutes.
 
 ### Run
 #### on Mac
