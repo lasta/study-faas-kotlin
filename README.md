@@ -11,7 +11,7 @@
 - [x] clean up `build.gradle.kts`
   - [x] create `buildSrc`
   - [ ] generate "executables" automatically
-- [ ] arrange source directory structure
+- [x] arrange source directory structure
 - [ ] import JSON serializer
 - [ ] import ktor
   - [ ] use HTTP Client
