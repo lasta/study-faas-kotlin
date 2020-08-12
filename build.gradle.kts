@@ -1,4 +1,5 @@
 // cf. https://madhead.me/posts/kotlin-native-lambda/
+
 plugins {
     kotlin("multiplatform").version("1.3.72")
 }
@@ -24,9 +25,9 @@ kotlin {
     }
 
     val targets = listOf(
-//      mingwX64("mingw"), // for windows
-        macosX64("macos"),
-        linuxX64("linux")
+//      mingwX64(), // for windows
+        macosX64(),
+        linuxX64()
     )
 
     configure(targets) {
