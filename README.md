@@ -8,7 +8,7 @@
 - [x] cross-compile for platforms at once
   - [sample][example to build at once]
 - [x] mark project structure automatically by IntelliJ IDEA
-- [ ] clean up `build.gradle.kts`
+- [x] clean up `build.gradle.kts`
   - [x] create `buildSrc`
   - [ ] generate "executables" automatically
 - [ ] arrange source directory structure
@@ -40,13 +40,13 @@ Initially, it may take several minutes.
 ### Run
 #### on Mac
 ```console
-$ ./build/bin/macosX64/sampleReleaseExecutable/sample.kexe
+$ ./build/bin/macosX64/entrypoint.sample1ReleaseExecutable/entrypoint.sample1.kexe
 Hello, Kotlin/Native!
 ```
 
 ### on Linux
 ```console
-$ ./build/bin/linuxX64/sampleReleaseExecutable/sample.kexe
+$ ./build/bin/linuxX64/entrypoint.sample1ReleaseExecutable/entrypoint.sample1.kexe
 Hello, Kotlin/Native!
 ```
 

@@ -1,4 +1,4 @@
-package sample
+package entrypoint.sample1
 
 fun hello(): String = "Hello, Kotlin/Native!"
 

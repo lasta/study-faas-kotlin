@@ -1,9 +1,9 @@
-package sample
+package entrypoint.sample1
 
 import kotlin.test.Test
 import kotlin.test.assertTrue
 
-class SampleTests {
+class MainTest {
     @Test
     fun testHello() {
         assertTrue("Kotlin/Native" in hello())
