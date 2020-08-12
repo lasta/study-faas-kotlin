@@ -8,5 +8,3 @@ pluginManagement {
     }
 }
 
-//enableFeaturePreview("GRADLE_METADATA")
-
