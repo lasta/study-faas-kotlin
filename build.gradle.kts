@@ -1,9 +1,11 @@
 // cf. https://madhead.me/posts/kotlin-native-lambda/
 
 import binaries.supplyEntryPoints
+import org.jetbrains.kotlin.config.KotlinCompilerVersion
 
 plugins {
-    kotlin("multiplatform").version("1.3.72")
+    kotlin("multiplatform") version "1.3.72"
+    kotlin("plugin.serialization") version "1.3.70"
 }
 
 repositories {
@@ -13,16 +15,25 @@ repositories {
 }
 
 kotlin {
+    // TODO: define other block
+    val ktorVersion = "1.3.2"
+
     sourceSets["commonMain"].apply {
         dependencies {
-            api("org.jetbrains.kotlin:kotlin-stdlib-common")
+            implementation(kotlin("stdlib-common", KotlinCompilerVersion.VERSION))
+            implementation("io.ktor:ktor-client-json:$ktorVersion")
+            implementation("io.ktor:ktor-client-json-native:$ktorVersion")
+            implementation("io.ktor:ktor-client-serialization:$ktorVersion")
+            implementation("io.ktor:ktor-client-serialization-native:$ktorVersion")
         }
     }
 
     sourceSets["commonTest"].apply {
         dependencies {
-            api("org.jetbrains.kotlin:kotlin-test-common")
-            api("org.jetbrains.kotlin:kotlin-test-annotations-common")
+            implementation(kotlin("test-common", KotlinCompilerVersion.VERSION))
+            implementation(kotlin("test-annotations-common", KotlinCompilerVersion.VERSION))
+            implementation("io.ktor:ktor-client-mock:$ktorVersion")
+            implementation("io.ktor:ktor-client-mock-native:$ktorVersion")
         }
     }
 
