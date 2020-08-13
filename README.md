@@ -13,6 +13,8 @@
   - [ ] generate "executables" automatically
 - [x] arrange source directory structure
 - [x] import JSON serializer
+  - [x] use stringify
+  - [ ] use deserializer
 - [x] import ktor
   - [ ] use HTTP Client
 - [ ] import DI library
