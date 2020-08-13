@@ -12,8 +12,8 @@
   - [x] create `buildSrc`
   - [ ] generate "executables" automatically
 - [x] arrange source directory structure
-- [ ] import JSON serializer
-- [ ] import ktor
+- [x] import JSON serializer
+- [x] import ktor
   - [ ] use HTTP Client
 - [ ] import DI library
   - kodein?
