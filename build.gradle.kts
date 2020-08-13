@@ -21,6 +21,7 @@ kotlin {
     sourceSets["commonMain"].apply {
         dependencies {
             implementation(kotlin("stdlib-common", KotlinCompilerVersion.VERSION))
+            implementation("io.ktor:ktor-client-cio:$ktorVersion")
             implementation("io.ktor:ktor-client-json:$ktorVersion")
             implementation("io.ktor:ktor-client-json-native:$ktorVersion")
             implementation("io.ktor:ktor-client-serialization:$ktorVersion")

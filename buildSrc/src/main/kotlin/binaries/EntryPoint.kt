@@ -34,5 +34,6 @@ data class EntryPoint(
 fun supplyEntryPoints(): List<EntryPoint> = listOf(
     // TODO: generate automatically with project structure
     EntryPoint(packageName = "entrypoint.sample1"),
-    EntryPoint(packageName = "entrypoint.sample2")
+    EntryPoint(packageName = "entrypoint.sample2"),
+    EntryPoint(packageName = "entrypoint.greeting")
 )
