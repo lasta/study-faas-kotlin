@@ -27,6 +27,7 @@
 - [ ] deploy
 - [ ] create API test
   - [ ] [preacher][preacher]
+- [ ] O/R mapper
 
 [example to build at once]: https://github.com/JetBrains/kotlin/blob/1.3.20/libraries/tools/kotlin-gradle-plugin-integration-tests/src/test/resources/testProject/new-mpp-native-binaries/kotlin-dsl/build.gradle.kts
 [preacher]: https://github.com/ymoch/preacher
