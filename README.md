@@ -65,6 +65,15 @@ BUILD SUCCESSFUL in 1s
 8 actionable tasks: 2 executed, 6 up-to-date
 ```
 
+## Example server
+The API server to test client.
+
+### Run the server
+```console
+$ ./gradlew ":etc:example:server:run"
+```
+
+See also [server's README.md](etc/example/server/README.md).
 
 ## Setup
 ### to run `sam local` on IntelliJ IDEA
