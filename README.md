@@ -5,18 +5,19 @@
 - [x] run "Hello, World!"
   - [x] on mac
   - [x] on Amazon Linux 2
-- [x] cross-compile for platforms at once
+- [ ] ~~cross-compile for platforms at once~~
   - [sample][example to build at once]
+  - **Unable to compile at once because of depending on "Curl"*
 - [x] mark project structure automatically by IntelliJ IDEA
 - [x] clean up `build.gradle.kts`
   - [x] create `buildSrc`
   - [ ] generate "executables" automatically
 - [x] arrange source directory structure
 - [x] import JSON serializer
-  - [x] use stringify
+  - [x] use ~~stringify~~ `encodeToString`
   - [x] use deserializer
 - [x] import ktor
-  - [ ] use HTTP Client
+  - [x] use HTTP Client
 - [ ] import DI library
   - kodein?
 - [ ] on IntelliJ IDEA

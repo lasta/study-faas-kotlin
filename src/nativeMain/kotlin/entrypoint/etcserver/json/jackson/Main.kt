@@ -5,9 +5,11 @@ import io.ktor.client.engine.curl.*
 import io.ktor.client.request.*
 import io.ktor.utils.io.core.*
 import kotlinx.coroutines.runBlocking
+import kotlinx.serialization.Serializable
+import kotlinx.serialization.json.Json
 
 fun main() = runBlocking {
-    val response: String = HttpClient(Curl).use { client ->
+    val response: HelloMessage = HttpClient(Curl).use { client ->
         client.get {
             port = 8080
             url {
@@ -15,5 +17,12 @@ fun main() = runBlocking {
             }
         }
     }
-    println(response)
+    val responseString = Json { allowStructuredMapKeys = true }.encodeToString(HelloMessage.serializer(), response)
+    println(responseString)
 }
+
+
+@Serializable
+data class HelloMessage(
+    val hello: String
+)
