@@ -24,3 +24,4 @@ hs_err_pid*
 
 # artifacts for buildSrc
 buildSrc/build/
+build/
